@@ -1,0 +1,25 @@
+# 环境与缓存
+.venv/
+.cache/
+
+# 构建产物
+build/
+dist/
+*.egg-info/
+
+# Python 字节码
+__pycache__/
+*.py[cod]
+
+# 测试与工具缓存
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# 示例数据与运行产物（由 examples/create_*_demo.py 重新生成）
+examples/data/
+examples/analysis-data/
+examples/downloads/
+examples/workspace/

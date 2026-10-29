@@ -1,0 +1,30 @@
+[build-system]
+requires = ["setuptools==84.0.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "geospatial-mcp"
+version = "0.2.0"
+description = "Agent-independent geospatial analysis and cartography MCP tools"
+readme = "README.md"
+requires-python = ">=3.12,<3.13"
+license = "Apache-2.0"
+license-files = ["LICENSE"]
+dependencies = [
+    "fastmcp==4.0.10",
+    "pydantic==2.13.5",
+    "mcp==2.2.0",
+    "numpy==2.3.4",
+    "fiona==1.10.1",
+    "rasterio==1.4.3",
+    "pyproj==3.7.2",
+    "shapely==2.1.2",
+    "pillow==12.3.0",
+]
+
+[project.scripts]
+geospatial-mcp = "geospatial_mcp.server:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+include = ["geospatial_mcp*"]
